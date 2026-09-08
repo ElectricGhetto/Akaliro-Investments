@@ -1,0 +1,8 @@
+{
+  "name": "Akaliro Investment",
+  "description": "Professional header for Akaliro Investment",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
