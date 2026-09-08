@@ -32,7 +32,7 @@ export default function HeaderSlider() {
   }, []);
 
   return (
-    <div className="relative h-[70vh] w-full overflow-hidden bg-gray-900">
+    <div className="relative h-[80vh] w-full overflow-hidden bg-gray-900">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
@@ -69,7 +69,7 @@ export default function HeaderSlider() {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.6 }}
-                className="bg-yellow-400 text-green-800 font-bold py-3 px-8 rounded-full hover:bg-yellow-500 transition-colors"
+                className="bg-yellow-400 text-green-800 font-bold py-4 px-10 text-xl rounded-full hover:bg-yellow-500 transition-colors"
                 onClick={() => alert('Download Profile')}
               >
                 Download Our Profile.

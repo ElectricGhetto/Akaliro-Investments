@@ -4,6 +4,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
         {/* About Company */}
         <div className="flex flex-col gap-4">
+          <img src="https://tufezgrcqbnxlqnzqsmc.supabase.co/storage/v1/object/public/Weekly/Akaliro%20Investments.png" alt="Akaliro Logo" className="h-20 w-auto bg-white p-2 rounded-lg" />
           <span className="text-xl font-bold">Akaliro investment</span>
           <p className="text-sm opacity-80 leading-relaxed">
             Dedicated to delivering sustainable growth and strategic wealth management solutions for a secure financial future.

@@ -15,7 +15,7 @@ export default function ContactForm() {
           <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
           <textarea className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#298600] outline-none" rows={4} placeholder="Your message"></textarea>
         </div>
-        <button type="submit" className="w-full bg-[#298600] text-white py-3 rounded-lg font-semibold hover:bg-[#206a00] transition-colors">
+        <button type="submit" className="w-full bg-[#298600] text-white py-4 rounded-lg text-lg font-semibold hover:bg-[#206a00] transition-colors">
           Send message
         </button>
       </form>

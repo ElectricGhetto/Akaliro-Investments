@@ -40,14 +40,14 @@ export default function Header() {
             <Link
               key={link.name}
               to={link.href}
-              className="text-base font-medium text-gray-600 transition-colors hover:text-gray-900"
+              className="text-lg font-medium text-gray-600 transition-colors hover:text-gray-900"
             >
               {link.name}
             </Link>
           ))}
           <Link
             to="/contact"
-            className="rounded-full bg-[#298600] px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-[#206a00]"
+            className="rounded-full bg-[#298600] px-8 py-4 text-base font-semibold text-white transition-all hover:bg-[#206a00]"
           >
             Contact
           </Link>
