@@ -15,17 +15,17 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white border-b border-gray-100">
-      <div className="bg-[#298600] text-white py-2 text-xs hidden md:block">
+      <div className="bg-[#298600] text-white py-2 text-sm font-sans font-bold hidden md:block">
         <div className="mx-auto max-w-7xl px-6 flex justify-between items-center">
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-1"><MapPin size={14}/><span>NAMUGONGO SONDE ROAD, MUKONO UGANDA</span></div>
-            <div className="flex items-center gap-1"><Phone size={14}/><span>+256-394-860-468/ 0752-373-372/0779-486-373</span></div>
-            <div className="flex items-center gap-1"><Mail size={14}/><span>akaliroinvestments@gmail.com</span></div>
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-2"><MapPin size={18}/><span>NAMUGONGO SONDE ROAD, MUKONO UGANDA</span></div>
+            <div className="flex items-center gap-2"><Phone size={18}/><span>+256-394-860-468/ 0752-373-372/0779-486-373</span></div>
+            <div className="flex items-center gap-2"><Mail size={18}/><span>akaliroinvestments@gmail.com</span></div>
           </div>
-          <div className="flex items-center gap-3">
-            <div className="p-1 rounded-full bg-white/20"><Facebook size={12}/></div>
-            <div className="p-1 rounded-full bg-white/20"><XIcon size={12}/></div>
-            <div className="p-1 rounded-full bg-white/20"><Linkedin size={12}/></div>
+          <div className="flex items-center gap-4">
+            <div className="p-1 rounded-full bg-white/20"><Facebook size={16}/></div>
+            <div className="p-1 rounded-full bg-white/20"><XIcon size={16}/></div>
+            <div className="p-1 rounded-full bg-white/20"><Linkedin size={16}/></div>
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function AboutUs() {
   return (
-    <section id="about" className="pb-24 px-6 max-w-7xl mx-auto">
+    <section id="about" className="pb-12 px-6 max-w-7xl mx-auto">
       <div className="grid md:grid-cols-2 gap-16 items-center">
         <div>
           <h2 className="text-4xl font-bold mb-6 text-gray-900">About Us</h2>

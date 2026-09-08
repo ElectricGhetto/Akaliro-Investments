@@ -22,7 +22,6 @@ function Home() {
       <SectionSeparator title="Who We are" />
       <AboutUs />
       <SectionSeparator title="What we do." />
-      <SectionSeparator title="Our tools." />
       <Equipment />
       <SectionSeparator title="Our team." />
       <Labor />

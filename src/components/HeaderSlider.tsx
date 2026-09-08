@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const slides = [
   {
@@ -22,15 +23,16 @@ const slides = [
 export default function HeaderSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
+  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    const timer = setInterval(nextSlide, 5000);
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <div className="relative h-[90vh] w-full overflow-hidden bg-gray-900">
+    <div className="relative h-[70vh] w-full overflow-hidden bg-gray-900">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSlide}
@@ -59,14 +61,35 @@ export default function HeaderSlider() {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.4 }}
-                className="text-lg md:text-xl"
+                className="text-lg md:text-xl mb-6"
               >
                 {slides[currentSlide].description}
               </motion.p>
+              <motion.button
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.6 }}
+                className="bg-yellow-400 text-green-800 font-bold py-3 px-8 rounded-full hover:bg-yellow-500 transition-colors"
+                onClick={() => alert('Download Profile')}
+              >
+                Download Our Profile.
+              </motion.button>
             </div>
           </div>
         </motion.div>
       </AnimatePresence>
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-white/30 rounded-full text-white hover:bg-white/50 transition-colors"
+      >
+        <ChevronLeft size={32} />
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-white/30 rounded-full text-white hover:bg-white/50 transition-colors"
+      >
+        <ChevronRight size={32} />
+      </button>
     </div>
   );
 }
