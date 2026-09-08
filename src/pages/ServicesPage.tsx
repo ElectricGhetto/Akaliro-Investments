@@ -9,21 +9,27 @@ export default function ServicesPage() {
   ];
 
   return (
-    <div className="pt-24 pb-24 px-6 max-w-7xl mx-auto min-h-screen">
-      <h1 className="text-4xl font-bold mb-16 text-center text-gray-900">Our Services</h1>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {services.map((service, index) => (
-          <div key={index} className="bg-white rounded-2xl shadow-md overflow-hidden transition-transform hover:scale-105">
-            <img src={service.image} alt={service.title} className="w-full h-56 object-cover" />
-            <div className="p-6">
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">{service.title}</h3>
-              <p className="text-gray-600 leading-relaxed mb-6">{service.description}</p>
-              <button className="w-full bg-[#298600] text-white py-2 rounded-lg font-semibold hover:bg-[#206a00] transition-colors">
-                Learn More
-              </button>
-            </div>
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section */}
+      <div className="relative h-64 md:h-80 bg-[#298600] flex items-center justify-center">
+        <div className="absolute inset-0 bg-black/40" />
+        <h1 className="relative z-10 text-5xl md:text-6xl font-bold text-white">Our Services</h1>
+      </div>
+
+      <div className="py-16 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-white rounded-2xl shadow-sm overflow-hidden">
+                <img src={service.image} alt={service.title} className="w-full h-64 object-cover" />
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold mb-4 text-gray-900 border-l-4 border-[#298600] pl-4">{service.title}</h3>
+                  <p className="text-xl text-gray-700 leading-relaxed mb-6">{service.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );

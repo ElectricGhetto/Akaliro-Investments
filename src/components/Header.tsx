@@ -30,12 +30,12 @@ export default function Header() {
         </div>
       </div>
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-        <Link to="/" className="flex items-center">
+        <Link to="/" className="flex items-center flex-none">
           <img src="https://tufezgrcqbnxlqnzqsmc.supabase.co/storage/v1/object/public/Weekly/Akaliro%20Investments.png" alt="Akaliro Logo" className="h-16 w-auto" />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center justify-center flex-1 gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -45,13 +45,17 @@ export default function Header() {
               {link.name}
             </Link>
           ))}
+        </nav>
+
+        {/* Contact Button */}
+        <div className="hidden md:flex flex-none">
           <Link
             to="/contact"
             className="rounded-full bg-[#298600] px-8 py-4 text-base font-semibold text-white transition-all hover:bg-[#206a00]"
           >
             Contact
           </Link>
-        </nav>
+        </div>
 
         {/* Mobile Menu Button */}
         <button
