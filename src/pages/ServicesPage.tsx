@@ -1,6 +1,6 @@
 export default function ServicesPage() {
   const services = [
-    { title: "HUMAN RESOURCE", description: "Providing skilled personnel and comprehensive management for your projects.", image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=800" },
+    { title: "HUMAN RESOURCE", description: "Providing skilled personnel and comprehensive management for your projects.", image: "https://tufezgrcqbnxlqnzqsmc.supabase.co/storage/v1/object/public/Weekly/Akaliro/Akaliro-Plant-and-Machinery-3.jpg" },
     { title: "MACHINES AND MATERIALS", description: "Supplying top-tier machinery and quality construction materials.", image: "https://images.unsplash.com/photo-1504917595217-d4f5ebe612b0?auto=format&fit=crop&q=80&w=800" },
     { title: "WORK EXPERIENCE", description: "Leveraging years of expertise to deliver exceptional results.", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" },
     { title: "QUALITY ASSURANCE SYSTEMS", description: "Ensuring all deliverables meet the highest standards.", image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800" },

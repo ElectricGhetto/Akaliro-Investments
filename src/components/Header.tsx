@@ -1,10 +1,11 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X as CloseIcon, Phone, Mail, MapPin, Facebook, Twitter, Linkedin, X as XIcon } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
+import { Menu, X as CloseIcon, Phone, Mail, MapPin, Facebook, Linkedin, X as XIcon } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const navLinks = [
     { name: 'Home', href: '/' },
@@ -12,6 +13,23 @@ export default function Header() {
     { name: 'Experience', href: '/experience' },
     { name: 'Our Services', href: '/services' },
   ];
+
+  const isLinkActive = (href: string) => {
+    if (href === '/') {
+      return location.pathname === '/';
+    }
+    if (href === '/services') {
+      return (
+        location.pathname === '/services' ||
+        location.pathname === '/heavy-machinery' ||
+        location.pathname === '/agricultural-tools' ||
+        location.pathname === '/logistics'
+      );
+    }
+    return location.pathname === href;
+  };
+
+  const isContactActive = location.pathname === '/contact';
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white border-b border-gray-100">
@@ -49,23 +67,41 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center justify-center flex-1 gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              to={link.href}
-              className="text-lg font-medium text-gray-600 transition-colors hover:text-gray-900"
-            >
-              {link.name}
-            </Link>
-          ))}
+        <nav className="hidden md:flex items-center justify-center flex-1 gap-2 lg:gap-3">
+          {navLinks.map((link) => {
+            const isActive = isLinkActive(link.href);
+            return (
+              <Link
+                key={link.name}
+                to={link.href}
+                className={`relative px-4 py-2 text-[17px] font-semibold transition-all duration-200 rounded-xl flex items-center ${
+                  isActive
+                    ? 'text-[#298600] font-bold bg-[#298600]/8 shadow-sm'
+                    : 'text-gray-600 hover:text-[#298600] hover:bg-gray-50'
+                }`}
+              >
+                <span>{link.name}</span>
+                {isActive && (
+                  <motion.div
+                    layoutId="activeNavIndicator"
+                    className="absolute -bottom-2 left-3 right-3 h-[3px] bg-[#298600] rounded-full"
+                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                  />
+                )}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Contact Button */}
         <div className="hidden md:flex flex-none">
           <Link
             to="/contact"
-            className="rounded-full bg-yellow-400 px-8 py-4 text-base font-bold text-green-800 transition-all hover:bg-yellow-500 shadow-sm"
+            className={`rounded-full px-8 py-3.5 text-base font-bold transition-all shadow-sm ${
+              isContactActive
+                ? 'bg-yellow-400 text-green-950 ring-4 ring-[#298600]/30 font-extrabold shadow-md'
+                : 'bg-yellow-400 text-green-900 hover:bg-yellow-500 hover:shadow'
+            }`}
           >
             Contact
           </Link>
@@ -89,20 +125,34 @@ export default function Header() {
             exit={{ opacity: 0, height: 0 }}
             className="border-t border-gray-100 bg-white md:hidden"
           >
-            <div className="flex flex-col px-6 py-4 gap-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.href}
-                  className="text-lg font-medium text-gray-600 hover:text-gray-900"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.name}
-                </Link>
-              ))}
+            <div className="flex flex-col px-6 py-4 gap-3">
+              {navLinks.map((link) => {
+                const isActive = isLinkActive(link.href);
+                return (
+                  <Link
+                    key={link.name}
+                    to={link.href}
+                    className={`text-lg font-medium transition-all px-4 py-2.5 rounded-xl flex items-center justify-between ${
+                      isActive
+                        ? 'bg-[#298600]/10 text-[#298600] font-bold border-l-4 border-[#298600]'
+                        : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                    }`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <span>{link.name}</span>
+                    {isActive && (
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#298600]" />
+                    )}
+                  </Link>
+                );
+              })}
               <Link
                 to="/contact"
-                className="w-full rounded-full bg-yellow-400 px-6 py-3.5 text-center text-lg font-bold text-green-800 transition-all hover:bg-yellow-500"
+                className={`w-full rounded-full px-6 py-3.5 text-center text-lg font-bold transition-all ${
+                  isContactActive
+                    ? 'bg-yellow-400 text-green-950 ring-4 ring-[#298600]/30 font-extrabold shadow-md'
+                    : 'bg-yellow-400 text-green-800 hover:bg-yellow-500'
+                }`}
                 onClick={() => setIsOpen(false)}
               >
                 Contact

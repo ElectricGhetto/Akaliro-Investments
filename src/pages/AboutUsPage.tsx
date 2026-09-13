@@ -6,9 +6,16 @@ export default function AboutUsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative h-64 md:h-80 bg-[#298600] flex items-center justify-center">
-        <div className="absolute inset-0 bg-black/40" />
-        <h1 className="relative z-10 text-5xl md:text-6xl font-bold text-white">About Us</h1>
+      <div className="relative h-64 md:h-80 bg-[#298600] flex items-center justify-center overflow-hidden">
+        <img
+          src="https://tufezgrcqbnxlqnzqsmc.supabase.co/storage/v1/object/public/Weekly/Akaliro/akaliro%20investments%20trucks.webp"
+          alt="Akaliro Investments Trucks"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-black/60 backdrop-blur-[1px]" />
+        <h1 className="relative z-10 text-5xl md:text-6xl font-bold text-white tracking-tight drop-shadow-md">
+          About Us
+        </h1>
       </div>
 
       {/* Our Story */}
@@ -20,7 +27,15 @@ export default function AboutUsPage() {
               Established with a vision to redefine facility management, AKaliro Investments has grown from a humble beginning into a trusted partner for numerous clients. Driven by the need for reliable, high-quality services, we have evolved by constantly adapting to industry demands and technological advancements.
             </p>
           </div>
-          <div className="bg-gray-200 h-64 md:h-96 rounded-2xl flex items-center justify-center text-gray-500 font-bold">Image Placeholder</div>
+          <div className="relative h-64 md:h-96 rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+            <img
+              src="https://tufezgrcqbnxlqnzqsmc.supabase.co/storage/v1/object/public/Weekly/Akaliro/Akaliro%20Investments%20Team%20(2).webp"
+              alt="AKaliro Investments Team"
+              className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
         </div>
       </div>
 
@@ -38,7 +53,15 @@ export default function AboutUsPage() {
 
       {/* What We Do */}
       <div className="py-16 px-6 max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        <div className="bg-gray-200 h-64 md:h-96 rounded-2xl flex items-center justify-center text-gray-500 font-bold">Image Placeholder</div>
+        <div className="relative h-64 md:h-96 rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+          <img
+            src="https://tufezgrcqbnxlqnzqsmc.supabase.co/storage/v1/object/public/Weekly/Akaliro/Akaliro%20Investments%20About%20Us.webp"
+            alt="What We Do - AKaliro Investments"
+            className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
         <div>
           <h2 className="text-4xl font-bold mb-6 text-gray-900 border-l-4 border-[#298600] pl-4">What We Do</h2>
           <p className="text-xl text-gray-700 leading-relaxed">
