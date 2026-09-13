@@ -1,6 +1,6 @@
 {
-  "name": "Akaliro Investment",
-  "description": "Professional header for Akaliro Investment",
+  "name": "AKaliro Investments",
+  "description": "Integrated services, heavy machinery, facility management, and agro-solutions by AKaliro Investments",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"

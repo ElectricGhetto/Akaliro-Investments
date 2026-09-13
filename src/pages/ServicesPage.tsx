@@ -21,7 +21,13 @@ export default function ServicesPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white rounded-2xl shadow-sm overflow-hidden">
-                <img src={service.image} alt={service.title} className="w-full h-64 object-cover" />
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-64 object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
                 <div className="p-8">
                   <h3 className="text-2xl font-bold mb-4 text-gray-900 border-l-4 border-[#298600] pl-4">{service.title}</h3>
                   <p className="text-xl text-gray-700 leading-relaxed mb-6">{service.description}</p>

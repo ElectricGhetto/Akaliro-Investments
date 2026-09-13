@@ -20,7 +20,14 @@ export default function Header() {
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2"><MapPin size={18}/><span>NAMUGONGO SONDE ROAD, MUKONO UGANDA</span></div>
             <div className="flex items-center gap-2"><Phone size={18}/><span>+256-394-860-468/ 0752-373-372/0779-486-373</span></div>
-            <div className="flex items-center gap-2"><Mail size={18}/><span>akaliroinvestments@gmail.com</span></div>
+            <a
+              href="mailto:akaliroinvestments@gmail.com"
+              className="flex items-center gap-2 hover:text-yellow-300 transition-colors"
+              title="Send email to akaliroinvestments@gmail.com"
+            >
+              <Mail size={18} />
+              <span>akaliroinvestments@gmail.com</span>
+            </a>
           </div>
           <div className="flex items-center gap-4">
             <div className="p-1 rounded-full bg-white/20"><Facebook size={16}/></div>
@@ -31,7 +38,14 @@ export default function Header() {
       </div>
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
         <Link to="/" className="flex items-center flex-none">
-          <img src="https://tufezgrcqbnxlqnzqsmc.supabase.co/storage/v1/object/public/Weekly/Akaliro%20Investments.png" alt="Akaliro Logo" className="h-16 w-auto" />
+          <img
+            src="https://tufezgrcqbnxlqnzqsmc.supabase.co/storage/v1/object/public/Weekly/Akaliro%20Investments.png"
+            alt="Akaliro Logo"
+            className="h-16 w-auto"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -51,7 +65,7 @@ export default function Header() {
         <div className="hidden md:flex flex-none">
           <Link
             to="/contact"
-            className="rounded-full bg-[#298600] px-8 py-4 text-base font-semibold text-white transition-all hover:bg-[#206a00]"
+            className="rounded-full bg-yellow-400 px-8 py-4 text-base font-bold text-green-800 transition-all hover:bg-yellow-500 shadow-sm"
           >
             Contact
           </Link>
@@ -88,11 +102,20 @@ export default function Header() {
               ))}
               <Link
                 to="/contact"
-                className="w-full rounded-full bg-[#298600] px-6 py-3.5 text-center text-lg font-semibold text-white"
+                className="w-full rounded-full bg-yellow-400 px-6 py-3.5 text-center text-lg font-bold text-green-800 transition-all hover:bg-yellow-500"
                 onClick={() => setIsOpen(false)}
               >
                 Contact
               </Link>
+              <div className="pt-2 border-t border-gray-100 flex flex-col gap-2">
+                <a
+                  href="mailto:akaliroinvestments@gmail.com"
+                  className="flex items-center gap-2 text-sm text-[#298600] font-semibold hover:underline"
+                >
+                  <Mail size={16} />
+                  <span>akaliroinvestments@gmail.com</span>
+                </a>
+              </div>
             </div>
           </motion.div>
         )}

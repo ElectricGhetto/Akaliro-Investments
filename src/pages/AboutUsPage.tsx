@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import HomeContactCTA from '../components/HomeContactCTA';
+import SectionSeparator from '../components/SectionSeparator';
 
 export default function AboutUsPage() {
   return (
@@ -15,7 +17,7 @@ export default function AboutUsPage() {
           <div>
             <h2 className="text-4xl font-bold mb-6 text-gray-900 border-l-4 border-[#298600] pl-4">Our Story</h2>
             <p className="text-xl text-gray-700 leading-relaxed">
-              Established with a vision to redefine facility management, Akaliro Investment has grown from a humble beginning into a trusted partner for numerous clients. Driven by the need for reliable, high-quality services, we have evolved by constantly adapting to industry demands and technological advancements.
+              Established with a vision to redefine facility management, AKaliro Investments has grown from a humble beginning into a trusted partner for numerous clients. Driven by the need for reliable, high-quality services, we have evolved by constantly adapting to industry demands and technological advancements.
             </p>
           </div>
           <div className="bg-gray-200 h-64 md:h-96 rounded-2xl flex items-center justify-center text-gray-500 font-bold">Image Placeholder</div>
@@ -24,25 +26,13 @@ export default function AboutUsPage() {
 
       {/* Mission & Vision */}
       <div className="py-16 px-6 max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
-        <div className="bg-white p-8 rounded-2xl shadow-sm">
+        <div className="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-[#298600]">
           <h3 className="text-3xl font-bold mb-4 text-[#298600]">Mission</h3>
           <p className="text-xl text-gray-700">To provide exceptional facility management and sustainable agricultural solutions that foster growth, safety, and operational excellence for our clients and communities.</p>
         </div>
-        <div className="bg-white p-8 rounded-2xl shadow-sm">
+        <div className="bg-white p-8 rounded-2xl shadow-sm border-t-4 border-[#298600]">
           <h3 className="text-3xl font-bold mb-4 text-[#298600]">Vision</h3>
           <p className="text-xl text-gray-700">To be the leading partner in integrated environmental and sustainable resource solutions, recognized for our innovation, reliability, and commitment to a greener future.</p>
-        </div>
-      </div>
-
-      {/* Core Values */}
-      <div className="bg-white py-16 px-6">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold mb-8 text-gray-900 border-l-4 border-[#298600] pl-4">Core Values</h2>
-          <div className="grid md:grid-cols-4 gap-6">
-            {['Integrity', 'Excellence', 'Innovation', 'Accountability'].map(value => (
-              <div key={value} className="bg-gray-50 p-6 rounded-xl font-bold text-center text-[#298600] text-xl">{value}</div>
-            ))}
-          </div>
         </div>
       </div>
 
@@ -52,7 +42,7 @@ export default function AboutUsPage() {
         <div>
           <h2 className="text-4xl font-bold mb-6 text-gray-900 border-l-4 border-[#298600] pl-4">What We Do</h2>
           <p className="text-xl text-gray-700 leading-relaxed">
-            Akaliro Investment provides comprehensive facility management and environmental services, 
+            AKaliro Investments provides comprehensive facility management and environmental services, 
             including professional cleaning for residential, office, hospital, and commercial spaces. 
             We specialize in large-scale fumigation, pest control, and landscaping, while also 
             supplying essential sanitation and safety products. We also contribute to sustainable 
@@ -71,13 +61,9 @@ export default function AboutUsPage() {
         </div>
       </div>
 
-      {/* CTA */}
-      <div className="py-16 px-6 text-center">
-        <h2 className="text-4xl font-bold mb-6 text-gray-900">Ready to Partner With Us?</h2>
-        <Link to="/contact" className="inline-block rounded-full bg-[#298600] px-12 py-5 font-semibold text-white text-xl transition-all hover:bg-[#206a00]">
-          Get in Touch
-        </Link>
-      </div>
+      {/* Get in Touch CTA from Homepage */}
+      <SectionSeparator title="Get in touch." />
+      <HomeContactCTA />
     </div>
   );
 }
