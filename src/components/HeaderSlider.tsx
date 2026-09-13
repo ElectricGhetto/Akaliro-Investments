@@ -43,7 +43,7 @@ export default function HeaderSlider() {
 
   return (
     <>
-      <div className="relative h-[80vh] w-full overflow-hidden bg-gray-900">
+      <div className="relative h-[calc(100vh-80px)] w-full overflow-hidden bg-gray-900">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide}

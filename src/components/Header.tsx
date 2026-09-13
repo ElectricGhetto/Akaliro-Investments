@@ -1,34 +1,37 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X as CloseIcon, Phone, Mail, MapPin, Facebook, Linkedin, X as XIcon } from 'lucide-react';
+import { Menu, X as CloseIcon, Phone, Mail, MapPin, Facebook, Linkedin, X as XIcon, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const location = useLocation();
 
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
     { name: 'Experience', href: '/experience' },
-    { name: 'Our Services', href: '/services' },
+  ];
+
+  const serviceSubLinks = [
+    { name: 'Core Services', href: '/services/core' },
+    { name: 'Supplies', href: '/services/supplies' },
+    { name: 'Related Services', href: '/services/related' },
+    { name: 'Adjacent Business Lines', href: '/services/adjacent' },
   ];
 
   const isLinkActive = (href: string) => {
     if (href === '/') {
       return location.pathname === '/';
     }
-    if (href === '/services') {
-      return (
-        location.pathname === '/services' ||
-        location.pathname === '/heavy-machinery' ||
-        location.pathname === '/agricultural-tools' ||
-        location.pathname === '/logistics'
-      );
+    if (href.startsWith('/services/')) {
+        return location.pathname.startsWith('/services/');
     }
     return location.pathname === href;
   };
 
+  const isServicesActive = location.pathname.startsWith('/services/');
   const isContactActive = location.pathname === '/contact';
 
   return (
@@ -91,6 +94,43 @@ export default function Header() {
               </Link>
             );
           })}
+          
+          {/* Services Dropdown */}
+          <div className="relative" onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)}>
+            <button
+                className={`relative px-4 py-2 text-[17px] font-semibold transition-all duration-200 rounded-xl flex items-center gap-1 ${
+                    isServicesActive
+                      ? 'text-[#298600] font-bold bg-[#298600]/8 shadow-sm'
+                      : 'text-gray-600 hover:text-[#298600] hover:bg-gray-50'
+                  }`}
+            >
+                <span>Our Services</span>
+                <ChevronDown size={16} />
+                {isServicesActive && (
+                  <motion.div
+                    layoutId="activeNavIndicator"
+                    className="absolute -bottom-2 left-3 right-3 h-[3px] bg-[#298600] rounded-full"
+                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                  />
+                )}
+            </button>
+            <AnimatePresence>
+                {servicesOpen && (
+                    <motion.div 
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        className="absolute left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden"
+                    >
+                        {serviceSubLinks.map(subLink => (
+                            <Link key={subLink.name} to={subLink.href} className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#298600]">
+                                {subLink.name}
+                            </Link>
+                        ))}
+                    </motion.div>
+                )}
+            </AnimatePresence>
+          </div>
         </nav>
 
         {/* Contact Button */}
@@ -146,6 +186,18 @@ export default function Header() {
                   </Link>
                 );
               })}
+              
+              <div className="border-t border-gray-100 pt-2">
+                <button className="text-lg font-medium text-gray-600 w-full text-left px-4 py-2.5 flex items-center justify-between" onClick={() => setServicesOpen(!servicesOpen)}>
+                    Our Services <ChevronDown size={18} />
+                </button>
+                {servicesOpen && serviceSubLinks.map(subLink => (
+                    <Link key={subLink.name} to={subLink.href} className="block px-8 py-2 text-gray-600 hover:text-[#298600]" onClick={() => setIsOpen(false)}>
+                        {subLink.name}
+                    </Link>
+                ))}
+              </div>
+
               <Link
                 to="/contact"
                 className={`w-full rounded-full px-6 py-3.5 text-center text-lg font-bold transition-all ${

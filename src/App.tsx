@@ -13,11 +13,16 @@ import ServicesPage from './pages/ServicesPage';
 import Equipment from './components/Equipment';
 import HomeContactCTA from './components/HomeContactCTA';
 import ContactForm from './components/ContactForm';
+import ClientLogos from './components/ClientLogos';
 import AboutUsPage from './pages/AboutUsPage';
 import ExperiencePage from './pages/ExperiencePage';
 import HeavyMachineryPage from './pages/HeavyMachineryPage';
 import AgriculturalToolsPage from './pages/AgriculturalToolsPage';
 import LogisticsPage from './pages/LogisticsPage';
+import CoreServicesPage from './pages/CoreServicesPage';
+import SuppliesPage from './pages/SuppliesPage';
+import RelatedServicesPage from './pages/RelatedServicesPage';
+import AdjacentBusinessLinesPage from './pages/AdjacentBusinessLinesPage';
 import ProfileReaderPage from './pages/ProfileReaderPage';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
@@ -27,7 +32,10 @@ import { initWebsiteProtection } from './utils/security';
 function Home() {
   return (
     <>
-      <HeaderSlider />
+      <div className="pt-4">
+        <HeaderSlider />
+      </div>
+      <ClientLogos />
       <SectionSeparator title="Who We are" />
       <AboutUs />
       <MissionVisionValues />
@@ -60,6 +68,10 @@ export default function App() {
           <Route path="/heavy-machinery" element={<HeavyMachineryPage />} />
           <Route path="/agricultural-tools" element={<AgriculturalToolsPage />} />
           <Route path="/logistics" element={<LogisticsPage />} />
+          <Route path="/services/core" element={<CoreServicesPage />} />
+          <Route path="/services/supplies" element={<SuppliesPage />} />
+          <Route path="/services/related" element={<RelatedServicesPage />} />
+          <Route path="/services/adjacent" element={<AdjacentBusinessLinesPage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/experience" element={<ExperiencePage />} />
           <Route path="/contact" element={<ContactForm />} />
