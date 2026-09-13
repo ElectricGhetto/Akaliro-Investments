@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Phone, Mail, MapPin, CheckCircle, Clock, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
 export default function HomeContactCTA() {
   return (
@@ -25,38 +25,6 @@ export default function HomeContactCTA() {
           From large-scale facility management and heavy machinery deployment to commercial cleaning and sustainable agricultural operations, we deliver turnkey solutions with guaranteed reliability, speed, and safety compliance.
         </p>
 
-        {/* Key Value & Information Points */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12 text-left">
-          <div className="bg-black/55 backdrop-blur-md p-6 rounded-2xl border border-white/15 shadow-lg">
-            <div className="flex items-center gap-3 mb-3 text-yellow-400">
-              <Clock size={24} />
-              <h4 className="font-bold text-lg text-white">Rapid Response</h4>
-            </div>
-            <p className="text-gray-300 text-sm leading-relaxed">
-              Prompt initial site assessments and rapid equipment mobilization across Kampala, Mukono, and regional districts.
-            </p>
-          </div>
-
-          <div className="bg-black/55 backdrop-blur-md p-6 rounded-2xl border border-white/15 shadow-lg">
-            <div className="flex items-center gap-3 mb-3 text-yellow-400">
-              <CheckCircle size={24} />
-              <h4 className="font-bold text-lg text-white">Customized Quotes</h4>
-            </div>
-            <p className="text-gray-300 text-sm leading-relaxed">
-              Tailored service packages aligned precisely with your project scope, facility size, and operational budget.
-            </p>
-          </div>
-
-          <div className="bg-black/55 backdrop-blur-md p-6 rounded-2xl border border-white/15 shadow-lg">
-            <div className="flex items-center gap-3 mb-3 text-yellow-400">
-              <ShieldCheck size={24} />
-              <h4 className="font-bold text-lg text-white">Certified Quality</h4>
-            </div>
-            <p className="text-gray-300 text-sm leading-relaxed">
-              Strict occupational safety protocols, fully trained workforce, and eco-certified chemicals for flawless site execution.
-            </p>
-          </div>
-        </div>
 
         {/* Quick Contact Details Banner */}
         <div className="bg-black/60 backdrop-blur-md border border-white/20 rounded-2xl p-6 mb-12 max-w-4xl mx-auto shadow-lg">

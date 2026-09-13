@@ -7,17 +7,17 @@ import ProfilePdfViewer, { PROFILE_PDF_URL } from './ProfilePdfViewer';
 const slides = [
   {
     image: 'https://tufezgrcqbnxlqnzqsmc.supabase.co/storage/v1/object/public/Weekly/Akaliro-Investments.jpg',
-    title: 'Strategic Growth',
+    title: 'Work Experience',
     description: 'Empowering your wealth with data-driven insights.',
   },
   {
     image: 'https://tufezgrcqbnxlqnzqsmc.supabase.co/storage/v1/object/public/Weekly/Akaliro-Investments-Tomatoes,-Banana-Plantations.jpg',
-    title: 'Global Opportunities',
+    title: 'Agriculture',
     description: 'Unlocking new markets for sustainable returns.',
   },
   {
     image: 'https://tufezgrcqbnxlqnzqsmc.supabase.co/storage/v1/object/public/Weekly/Akaliro-Investments-Cleaning-Services.jpg',
-    title: 'Technological Future',
+    title: 'Cleaning & Maintenance',
     description: 'Investing in the innovation that defines tomorrow.',
   },
 ];

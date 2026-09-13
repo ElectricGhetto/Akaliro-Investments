@@ -8,7 +8,7 @@ export default function AboutUsPage() {
       {/* Hero Section */}
       <div className="relative h-64 md:h-80 bg-[#298600] flex items-center justify-center overflow-hidden">
         <img
-          src="https://tufezgrcqbnxlqnzqsmc.supabase.co/storage/v1/object/public/Weekly/Akaliro/akaliro%20investments%20trucks.webp"
+          src="https://tufezgrcqbnxlqnzqsmc.supabase.co/storage/v1/object/public/Weekly/Akaliro/Akaliro-Investments-About-Us.jpg"
           alt="Akaliro Investments Trucks"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />

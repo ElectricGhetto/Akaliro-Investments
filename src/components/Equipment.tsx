@@ -10,22 +10,22 @@ export default function Equipment() {
       link: "/heavy-machinery"
     },
     {
-      title: "Agricultural Tools",
+      title: "Agriculture",
       description: "Advanced tools for efficient cultivation.",
-      image: "https://tufezgrcqbnxlqnzqsmc.supabase.co/storage/v1/object/public/Weekly/Akaliro/Akaliro-Plant-and-Machinery-3.jpg",
+      image: "https://tufezgrcqbnxlqnzqsmc.supabase.co/storage/v1/object/public/Weekly/Akairo-Investments-Plantations.jpg",
       link: "/agricultural-tools"
     },
     {
-      title: "Logistics Fleet",
-      description: "Reliable transport for timely delivery.",
-      image: "https://tufezgrcqbnxlqnzqsmc.supabase.co/storage/v1/object/public/Weekly/Akaliro/Akaliro-Plant-and-Machinery.jpg",
+      title: "Maintenance",
+      description: "Professional maintenance services.",
+      image: "https://tufezgrcqbnxlqnzqsmc.supabase.co/storage/v1/object/public/Weekly/Akaliro/Mainteinance.jpg",
       link: "/logistics"
     },
   ];
 
   return (
     <section id="equipment" className="pt-2 pb-20 px-6 max-w-7xl mx-auto">
-      <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">Equipment and machinery</h2>
+      <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">Our Services</h2>
       <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto text-lg">
         We utilize state-of-the-art equipment to ensure quality and efficiency across all our service areas.
       </p>

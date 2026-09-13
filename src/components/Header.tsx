@@ -6,12 +6,12 @@ import { motion, AnimatePresence } from 'motion/react';
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [experienceOpen, setExperienceOpen] = useState(false);
   const location = useLocation();
 
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
-    { name: 'Experience', href: '/experience' },
   ];
 
   const serviceSubLinks = [
@@ -21,6 +21,13 @@ export default function Header() {
     { name: 'Adjacent Business Lines', href: '/services/adjacent' },
   ];
 
+  const experienceSubLinks = [
+    { name: 'Overall Track Record', href: '/experience/track-record' },
+    { name: 'Key Clients & Contracts', href: '/experience/clients' },
+    { name: 'Open Space Greening', href: '/experience/greening' },
+    { name: 'Other Experience Notes', href: '/experience/notes' },
+  ];
+
   const isLinkActive = (href: string) => {
     if (href === '/') {
       return location.pathname === '/';
@@ -28,10 +35,14 @@ export default function Header() {
     if (href.startsWith('/services/')) {
         return location.pathname.startsWith('/services/');
     }
+    if (href.startsWith('/experience/')) {
+        return location.pathname.startsWith('/experience/');
+    }
     return location.pathname === href;
   };
 
   const isServicesActive = location.pathname.startsWith('/services/');
+  const isExperienceActive = location.pathname.startsWith('/experience/');
   const isContactActive = location.pathname === '/contact';
 
   return (
@@ -77,7 +88,7 @@ export default function Header() {
               <Link
                 key={link.name}
                 to={link.href}
-                className={`relative px-4 py-2 text-[17px] font-semibold transition-all duration-200 rounded-xl flex items-center ${
+                className={`relative px-4 py-2 text-xl font-semibold transition-all duration-200 rounded-xl flex items-center ${
                   isActive
                     ? 'text-[#298600] font-bold bg-[#298600]/8 shadow-sm'
                     : 'text-gray-600 hover:text-[#298600] hover:bg-gray-50'
@@ -98,7 +109,7 @@ export default function Header() {
           {/* Services Dropdown */}
           <div className="relative" onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)}>
             <button
-                className={`relative px-4 py-2 text-[17px] font-semibold transition-all duration-200 rounded-xl flex items-center gap-1 ${
+                className={`relative px-4 py-2 text-xl font-semibold transition-all duration-200 rounded-xl flex items-center gap-1 ${
                     isServicesActive
                       ? 'text-[#298600] font-bold bg-[#298600]/8 shadow-sm'
                       : 'text-gray-600 hover:text-[#298600] hover:bg-gray-50'
@@ -123,7 +134,44 @@ export default function Header() {
                         className="absolute left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden"
                     >
                         {serviceSubLinks.map(subLink => (
-                            <Link key={subLink.name} to={subLink.href} className="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#298600]">
+                            <Link key={subLink.name} to={subLink.href} className="block px-4 py-3 text-xl text-gray-700 hover:bg-gray-50 hover:text-[#298600]">
+                                {subLink.name}
+                            </Link>
+                        ))}
+                    </motion.div>
+                )}
+            </AnimatePresence>
+          </div>
+
+          {/* Experience Dropdown */}
+          <div className="relative" onMouseEnter={() => setExperienceOpen(true)} onMouseLeave={() => setExperienceOpen(false)}>
+            <button
+                className={`relative px-4 py-2 text-xl font-semibold transition-all duration-200 rounded-xl flex items-center gap-1 ${
+                    isExperienceActive
+                      ? 'text-[#298600] font-bold bg-[#298600]/8 shadow-sm'
+                      : 'text-gray-600 hover:text-[#298600] hover:bg-gray-50'
+                  }`}
+            >
+                <span>Experience</span>
+                <ChevronDown size={16} />
+                {isExperienceActive && (
+                  <motion.div
+                    layoutId="activeNavIndicator"
+                    className="absolute -bottom-2 left-3 right-3 h-[3px] bg-[#298600] rounded-full"
+                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                  />
+                )}
+            </button>
+            <AnimatePresence>
+                {experienceOpen && (
+                    <motion.div 
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        className="absolute left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden"
+                    >
+                        {experienceSubLinks.map(subLink => (
+                            <Link key={subLink.name} to={subLink.href} className="block px-4 py-3 text-xl text-gray-700 hover:bg-gray-50 hover:text-[#298600]">
                                 {subLink.name}
                             </Link>
                         ))}
@@ -172,7 +220,7 @@ export default function Header() {
                   <Link
                     key={link.name}
                     to={link.href}
-                    className={`text-lg font-medium transition-all px-4 py-2.5 rounded-xl flex items-center justify-between ${
+                    className={`text-2xl font-medium transition-all px-4 py-2.5 rounded-xl flex items-center justify-between ${
                       isActive
                         ? 'bg-[#298600]/10 text-[#298600] font-bold border-l-4 border-[#298600]'
                         : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
@@ -188,11 +236,22 @@ export default function Header() {
               })}
               
               <div className="border-t border-gray-100 pt-2">
-                <button className="text-lg font-medium text-gray-600 w-full text-left px-4 py-2.5 flex items-center justify-between" onClick={() => setServicesOpen(!servicesOpen)}>
+                <button className="text-2xl font-medium text-gray-600 w-full text-left px-4 py-2.5 flex items-center justify-between" onClick={() => setServicesOpen(!servicesOpen)}>
                     Our Services <ChevronDown size={18} />
                 </button>
                 {servicesOpen && serviceSubLinks.map(subLink => (
-                    <Link key={subLink.name} to={subLink.href} className="block px-8 py-2 text-gray-600 hover:text-[#298600]" onClick={() => setIsOpen(false)}>
+                    <Link key={subLink.name} to={subLink.href} className="block px-8 py-2 text-xl text-gray-600 hover:text-[#298600]" onClick={() => setIsOpen(false)}>
+                        {subLink.name}
+                    </Link>
+                ))}
+              </div>
+
+              <div className="border-t border-gray-100 pt-2">
+                <button className="text-2xl font-medium text-gray-600 w-full text-left px-4 py-2.5 flex items-center justify-between" onClick={() => setExperienceOpen(!experienceOpen)}>
+                    Experience <ChevronDown size={18} />
+                </button>
+                {experienceOpen && experienceSubLinks.map(subLink => (
+                    <Link key={subLink.name} to={subLink.href} className="block px-8 py-2 text-xl text-gray-600 hover:text-[#298600]" onClick={() => setIsOpen(false)}>
                         {subLink.name}
                     </Link>
                 ))}
@@ -200,7 +259,7 @@ export default function Header() {
 
               <Link
                 to="/contact"
-                className={`w-full rounded-full px-6 py-3.5 text-center text-lg font-bold transition-all ${
+                className={`w-full rounded-full px-6 py-3.5 text-center text-2xl font-bold transition-all ${
                   isContactActive
                     ? 'bg-yellow-400 text-green-950 ring-4 ring-[#298600]/30 font-extrabold shadow-md'
                     : 'bg-yellow-400 text-green-800 hover:bg-yellow-500'

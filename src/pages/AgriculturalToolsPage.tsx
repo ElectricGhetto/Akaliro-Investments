@@ -4,9 +4,14 @@ export default function AgriculturalToolsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative h-64 md:h-80 bg-[#298600] flex items-center justify-center">
+      <div className="relative h-64 md:h-80 bg-[#298600] flex items-center justify-center overflow-hidden">
+        <img 
+          src="https://tufezgrcqbnxlqnzqsmc.supabase.co/storage/v1/object/public/Weekly/Akaliro/Akaliro-Investments-Agriculture.jpg"
+          alt="Agriculture Header"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
         <div className="absolute inset-0 bg-black/40" />
-        <h1 className="relative z-10 text-5xl md:text-6xl font-bold text-white">Agricultural Tools</h1>
+        <h1 className="relative z-10 text-5xl md:text-6xl font-bold text-white">Agriculture</h1>
       </div>
 
       {/* Overview Section */}
@@ -18,9 +23,11 @@ export default function AgriculturalToolsPage() {
               AKaliro Investments equips farmers and agribusinesses with high-efficiency cultivation machinery, harvesting implements, and precision irrigation tools. We bridge traditional agriculture with modern mechanized techniques to increase yields, reduce labor overhead, and build sustainable crop systems across Uganda.
             </p>
           </div>
-          <div className="bg-gray-200 h-64 md:h-96 rounded-2xl flex items-center justify-center text-gray-500 font-bold text-xl">
-            Image Placeholder
-          </div>
+          <img
+            src="https://tufezgrcqbnxlqnzqsmc.supabase.co/storage/v1/object/public/Weekly/Akairo-Investments-Plantations.jpg"
+            alt="Agriculture Plantations"
+            className="w-full h-64 md:h-96 object-cover rounded-2xl"
+          />
         </div>
       </div>
 
@@ -40,19 +47,6 @@ export default function AgriculturalToolsPage() {
         </div>
       </div>
 
-      {/* Core Tool Categories */}
-      <div className="bg-white py-16 px-6">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold mb-8 text-gray-900 border-l-4 border-[#298600] pl-4">Agricultural Tool Categories</h2>
-          <div className="grid md:grid-cols-4 gap-6">
-            {['Tractors & Plows', 'Irrigation Systems', 'Planters & Seeders', 'Motorized Sprayers'].map((category) => (
-              <div key={category} className="bg-gray-50 p-6 rounded-xl font-bold text-center text-[#298600] text-xl">
-                {category}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
 
       {/* Modernization & Equipment Support */}
       <div className="py-16 px-6 max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
@@ -67,15 +61,6 @@ export default function AgriculturalToolsPage() {
         </div>
       </div>
 
-      {/* Commercial Agricultural Services */}
-      <div className="bg-white py-16 px-6">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold mb-6 text-gray-900 border-l-4 border-[#298600] pl-4">Turnkey Agribusiness Equipment</h2>
-          <p className="text-xl text-gray-700 leading-relaxed">
-            From seasonal cultivation equipment rentals to commercial farm planning and plantation irrigation setups, AKaliro Investments is your dependable agricultural mechanization partner.
-          </p>
-        </div>
-      </div>
 
       {/* CTA Section */}
       <div className="py-16 px-6 text-center">

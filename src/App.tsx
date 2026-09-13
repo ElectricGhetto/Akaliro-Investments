@@ -16,6 +16,10 @@ import ContactForm from './components/ContactForm';
 import ClientLogos from './components/ClientLogos';
 import AboutUsPage from './pages/AboutUsPage';
 import ExperiencePage from './pages/ExperiencePage';
+import ExperienceTrackRecordPage from './pages/ExperienceTrackRecordPage';
+import ExperienceClientsPage from './pages/ExperienceClientsPage';
+import ExperienceGreeningPage from './pages/ExperienceGreeningPage';
+import ExperienceNotesPage from './pages/ExperienceNotesPage';
 import HeavyMachineryPage from './pages/HeavyMachineryPage';
 import AgriculturalToolsPage from './pages/AgriculturalToolsPage';
 import LogisticsPage from './pages/LogisticsPage';
@@ -25,6 +29,7 @@ import RelatedServicesPage from './pages/RelatedServicesPage';
 import AdjacentBusinessLinesPage from './pages/AdjacentBusinessLinesPage';
 import ProfileReaderPage from './pages/ProfileReaderPage';
 import Footer from './components/Footer';
+import FloatingContactForm from './components/FloatingContactForm';
 import ScrollToTop from './components/ScrollToTop';
 import { preloadImages, APP_IMAGES } from './utils/imageOptimizer';
 import { initWebsiteProtection } from './utils/security';
@@ -61,6 +66,7 @@ export default function App() {
       <ScrollToTop />
       <div className="min-h-screen bg-gray-50">
         <Header />
+        <FloatingContactForm />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUsPage />} />
@@ -74,6 +80,10 @@ export default function App() {
           <Route path="/services/adjacent" element={<AdjacentBusinessLinesPage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/experience" element={<ExperiencePage />} />
+          <Route path="/experience/track-record" element={<ExperienceTrackRecordPage />} />
+          <Route path="/experience/clients" element={<ExperienceClientsPage />} />
+          <Route path="/experience/greening" element={<ExperienceGreeningPage />} />
+          <Route path="/experience/notes" element={<ExperienceNotesPage />} />
           <Route path="/contact" element={<ContactForm />} />
         </Routes>
         <Footer />

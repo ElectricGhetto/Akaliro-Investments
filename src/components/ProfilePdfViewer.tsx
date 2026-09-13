@@ -21,7 +21,7 @@ import {
 } from 'lucide-react';
 
 export const PROFILE_PDF_URL =
-  'https://tufezgrcqbnxlqnzqsmc.supabase.co/storage/v1/object/public/Weekly/Akaliro/akaliro%20investiments.%20profile.pdf';
+  'https://tufezgrcqbnxlqnzqsmc.supabase.co/storage/v1/object/public/Weekly/Akaliro/Akaliro%20Investments%20Profile_compressed%20(1).pdf';
 
 interface ProfilePdfViewerProps {
   onClose?: () => void;

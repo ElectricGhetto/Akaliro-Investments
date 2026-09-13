@@ -4,7 +4,12 @@ export default function HeavyMachineryPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative h-64 md:h-80 bg-[#298600] flex items-center justify-center">
+      <div className="relative h-64 md:h-80 bg-[#298600] flex items-center justify-center overflow-hidden">
+        <img 
+          src="https://tufezgrcqbnxlqnzqsmc.supabase.co/storage/v1/object/public/Weekly/Akaliro/Akaliro-Investments-Header-Machinery.jpg"
+          alt="Heavy Machinery Header"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
         <div className="absolute inset-0 bg-black/40" />
         <h1 className="relative z-10 text-5xl md:text-6xl font-bold text-white">Heavy Machinery</h1>
       </div>

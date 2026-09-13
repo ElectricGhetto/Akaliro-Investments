@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail, Facebook, Linkedin, X as XIcon } from 'lucide-react';
+import ContactFormFields from './ContactFormFields';
 
 export default function ContactForm() {
   return (
@@ -15,41 +16,12 @@ export default function ContactForm() {
 
       {/* Content Container */}
       <div className="relative z-10 max-w-3xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-10 text-white tracking-tight">
+        <h2 className="text-4xl md:text-5xl font-bold center mb-10 text-white tracking-tight">
           Contact Us
         </h2>
-        <form className="bg-white p-8 md:p-10 rounded-3xl shadow-2xl flex flex-col gap-6 border border-gray-100">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
-            <input
-              type="text"
-              className="w-full px-4 py-3.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#298600] focus:border-transparent outline-none transition-all"
-              placeholder="Your name"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-            <input
-              type="email"
-              className="w-full px-4 py-3.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#298600] focus:border-transparent outline-none transition-all"
-              placeholder="Your email"
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-            <textarea
-              className="w-full px-4 py-3.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#298600] focus:border-transparent outline-none transition-all"
-              rows={4}
-              placeholder="Your message"
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            className="w-full bg-[#298600] text-white py-4 rounded-xl text-lg font-bold hover:bg-[#206a00] transition-colors shadow-md"
-          >
-            Send message
-          </button>
-
+        <div className="bg-white p-8 md:p-10 rounded-3xl shadow-2xl flex flex-col gap-6 border border-gray-100">
+          <ContactFormFields />
+          
           {/* Contact Details */}
           <div className="mt-6 pt-8 border-t border-gray-200 flex flex-col gap-5 text-gray-700">
             <h3 className="text-xl font-bold text-gray-900 border-l-4 border-[#298600] pl-3">Contact Information</h3>
@@ -101,7 +73,7 @@ export default function ContactForm() {
               </div>
             </div>
           </div>
-        </form>
+        </div>
       </div>
     </section>
   );
