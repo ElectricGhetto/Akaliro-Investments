@@ -42,7 +42,7 @@ export default function ContactForm() {
               </div>
               <div>
                 <p className="text-xs uppercase font-bold text-gray-400">Phone Numbers</p>
-                <p className="text-base font-semibold text-gray-800">+256-394-860-468 / 0752-373-372 / 0779-486-373</p>
+                <p className="text-base font-semibold text-gray-800"><a href="tel:+256394860468" className="hover:text-[#298600]">+256-394-860-468</a> / <a href="tel:+256752373372" className="hover:text-[#298600]">0752-373-372</a> / <a href="tel:+256779486373" className="hover:text-[#298600]">0779-486-373</a></p>
               </div>
             </div>
 

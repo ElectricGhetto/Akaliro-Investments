@@ -35,11 +35,11 @@ export default function HomeContactCTA() {
             </div>
             <div className="flex items-center gap-2">
               <Phone size={18} className="text-yellow-400 flex-none" />
-              <span>+256-394-860-468 / 0752-373-372</span>
+              <a href="tel:+256394860468" className="hover:text-yellow-400">+256-394-860-468</a> / <a href="tel:+256752373372" className="hover:text-yellow-400">0752-373-372</a>
             </div>
             <div className="flex items-center gap-2">
               <Mail size={18} className="text-yellow-400 flex-none" />
-              <span>akaliroinvestments@gmail.com</span>
+              <a href="mailto:akaliroinvestments@gmail.com" className="hover:text-yellow-400">akaliroinvestments@gmail.com</a>
             </div>
           </div>
         </div>

@@ -8,17 +8,17 @@ const slides = [
   {
     image: 'https://tufezgrcqbnxlqnzqsmc.supabase.co/storage/v1/object/public/Weekly/Akaliro-Investments.jpg',
     title: 'Work Experience',
-    description: 'Empowering your wealth with data-driven insights.',
+    description: 'Over 7 years of Service to the General Public. Over 7 years of Experience.',
   },
   {
     image: 'https://tufezgrcqbnxlqnzqsmc.supabase.co/storage/v1/object/public/Weekly/Akaliro-Investments-Tomatoes,-Banana-Plantations.jpg',
     title: 'Agriculture',
-    description: 'Unlocking new markets for sustainable returns.',
+    description: 'Our Agricultural Produce boosts our strength in the open market.',
   },
   {
     image: 'https://tufezgrcqbnxlqnzqsmc.supabase.co/storage/v1/object/public/Weekly/Akaliro-Investments-Cleaning-Services.jpg',
     title: 'Cleaning & Maintenance',
-    description: 'Investing in the innovation that defines tomorrow.',
+    description: 'A wide range of deep and distant cleaning and mainteinance services for your Institution.',
   },
 ];
 

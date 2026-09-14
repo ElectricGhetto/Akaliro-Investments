@@ -38,7 +38,13 @@ export default function Footer() {
             <span className="font-bold text-xl mb-1">Contact</span>
             <span className="text-[15px] md:text-base opacity-90">Namugongo sonde road, Mukono Uganda</span>
             <span className="text-[15px] md:text-base opacity-90">P.O. Box 107356 Kampala</span>
-            <span className="text-[15px] md:text-base opacity-90">+256-394-860-468 / 0752-373-372 / 0779-486-373</span>
+            <div className="text-[15px] md:text-base opacity-90 flex flex-wrap gap-x-2 gap-y-1">
+              <a href="tel:+256394860468" className="hover:opacity-100 underline decoration-white/50">+256-394-860-468</a>
+              <span>/</span>
+              <a href="tel:+256752373372" className="hover:opacity-100 underline decoration-white/50">0752-373-372</a>
+              <span>/</span>
+              <a href="tel:+256779486373" className="hover:opacity-100 underline decoration-white/50">0779-486-373</a>
+            </div>
             <a
               href="mailto:akaliroinvestments@gmail.com"
               className="text-[15px] md:text-base font-medium text-white/95 hover:text-white underline underline-offset-4 decoration-white/50 hover:decoration-white transition-colors"

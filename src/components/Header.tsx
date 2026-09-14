@@ -51,7 +51,7 @@ export default function Header() {
         <div className="mx-auto max-w-7xl px-6 flex justify-between items-center">
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2"><MapPin size={18}/><span>NAMUGONGO SONDE ROAD, MUKONO UGANDA</span></div>
-            <div className="flex items-center gap-2"><Phone size={18}/><span>+256-394-860-468/ 0752-373-372/0779-486-373</span></div>
+            <div className="flex items-center gap-2"><Phone size={18}/><a href="tel:+256394860468" className="hover:text-yellow-300 transition-colors">+256-394-860-468</a>/ <a href="tel:+256752373372" className="hover:text-yellow-300 transition-colors">0752-373-372</a>/<a href="tel:+256779486373" className="hover:text-yellow-300 transition-colors">0779-486-373</a></div>
             <a
               href="mailto:akaliroinvestments@gmail.com"
               className="flex items-center gap-2 hover:text-yellow-300 transition-colors"
