@@ -14,7 +14,7 @@ export default function Services() {
       </p>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {services.map((service, index) => (
-          <div key={index} className="bg-white rounded-2xl shadow-md overflow-hidden transition-transform hover:scale-105">
+          <div key={service.title} className="bg-white rounded-2xl shadow-md overflow-hidden transition-transform hover:scale-105">
             <img
               src={service.image}
               alt={service.title}

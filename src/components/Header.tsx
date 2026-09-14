@@ -88,7 +88,7 @@ export default function Header() {
               <Link
                 key={link.name}
                 to={link.href}
-                className={`relative px-4 py-2 text-xl font-semibold transition-all duration-200 rounded-xl flex items-center ${
+                className={`relative px-4 py-2 text-lg font-bold font-sans transition-all duration-200 rounded-xl flex items-center ${
                   isActive
                     ? 'text-[#298600] font-bold bg-[#298600]/8 shadow-sm'
                     : 'text-gray-600 hover:text-[#298600] hover:bg-gray-50'
@@ -109,7 +109,7 @@ export default function Header() {
           {/* Services Dropdown */}
           <div className="relative" onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)}>
             <button
-                className={`relative px-4 py-2 text-xl font-semibold transition-all duration-200 rounded-xl flex items-center gap-1 ${
+                className={`relative px-4 py-2 text-lg font-bold font-sans transition-all duration-200 rounded-xl flex items-center gap-1 ${
                     isServicesActive
                       ? 'text-[#298600] font-bold bg-[#298600]/8 shadow-sm'
                       : 'text-gray-600 hover:text-[#298600] hover:bg-gray-50'
@@ -134,7 +134,7 @@ export default function Header() {
                         className="absolute left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden"
                     >
                         {serviceSubLinks.map(subLink => (
-                            <Link key={subLink.name} to={subLink.href} className="block px-4 py-3 text-xl text-gray-700 hover:bg-gray-50 hover:text-[#298600]">
+                            <Link key={subLink.name} to={subLink.href} className="block px-4 py-3 text-lg font-sans text-gray-700 hover:bg-gray-50 hover:text-[#298600]">
                                 {subLink.name}
                             </Link>
                         ))}
@@ -146,7 +146,7 @@ export default function Header() {
           {/* Experience Dropdown */}
           <div className="relative" onMouseEnter={() => setExperienceOpen(true)} onMouseLeave={() => setExperienceOpen(false)}>
             <button
-                className={`relative px-4 py-2 text-xl font-semibold transition-all duration-200 rounded-xl flex items-center gap-1 ${
+                className={`relative px-4 py-2 text-lg font-bold font-sans transition-all duration-200 rounded-xl flex items-center gap-1 ${
                     isExperienceActive
                       ? 'text-[#298600] font-bold bg-[#298600]/8 shadow-sm'
                       : 'text-gray-600 hover:text-[#298600] hover:bg-gray-50'
@@ -171,7 +171,7 @@ export default function Header() {
                         className="absolute left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden"
                     >
                         {experienceSubLinks.map(subLink => (
-                            <Link key={subLink.name} to={subLink.href} className="block px-4 py-3 text-xl text-gray-700 hover:bg-gray-50 hover:text-[#298600]">
+                            <Link key={subLink.name} to={subLink.href} className="block px-4 py-3 text-lg font-sans text-gray-700 hover:bg-gray-50 hover:text-[#298600]">
                                 {subLink.name}
                             </Link>
                         ))}
@@ -220,7 +220,7 @@ export default function Header() {
                   <Link
                     key={link.name}
                     to={link.href}
-                    className={`text-2xl font-medium transition-all px-4 py-2.5 rounded-xl flex items-center justify-between ${
+                    className={`text-lg font-bold font-sans transition-all px-4 py-2.5 rounded-xl flex items-center justify-between ${
                       isActive
                         ? 'bg-[#298600]/10 text-[#298600] font-bold border-l-4 border-[#298600]'
                         : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
@@ -240,7 +240,7 @@ export default function Header() {
                     Our Services <ChevronDown size={18} />
                 </button>
                 {servicesOpen && serviceSubLinks.map(subLink => (
-                    <Link key={subLink.name} to={subLink.href} className="block px-8 py-2 text-xl text-gray-600 hover:text-[#298600]" onClick={() => setIsOpen(false)}>
+                    <Link key={subLink.name} to={subLink.href} className="block px-8 py-2 text-lg font-sans text-gray-600 hover:text-[#298600]" onClick={() => setIsOpen(false)}>
                         {subLink.name}
                     </Link>
                 ))}
@@ -251,7 +251,7 @@ export default function Header() {
                     Experience <ChevronDown size={18} />
                 </button>
                 {experienceOpen && experienceSubLinks.map(subLink => (
-                    <Link key={subLink.name} to={subLink.href} className="block px-8 py-2 text-xl text-gray-600 hover:text-[#298600]" onClick={() => setIsOpen(false)}>
+                    <Link key={subLink.name} to={subLink.href} className="block px-8 py-2 text-lg font-sans text-gray-600 hover:text-[#298600]" onClick={() => setIsOpen(false)}>
                         {subLink.name}
                     </Link>
                 ))}

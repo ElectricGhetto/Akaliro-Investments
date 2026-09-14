@@ -20,7 +20,7 @@ export default function ClientLogos() {
         >
           {[...clientLogos, ...clientLogos].map((logo, index) => (
             <img
-              key={index}
+              key={`${logo}-${index}`}
               src={logo}
               alt="Client Logo"
               className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"

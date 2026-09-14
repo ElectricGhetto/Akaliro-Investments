@@ -50,7 +50,7 @@ export default function HeaderSlider() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.5 }}
             className="absolute inset-0"
           >
             <img
@@ -63,27 +63,13 @@ export default function HeaderSlider() {
             />
             <div className="absolute inset-x-0 bottom-12 flex justify-center px-6">
               <div className="max-w-4xl px-8 py-10 text-center text-white bg-black/60 rounded-3xl">
-                <motion.h2
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.2 }}
-                  className="mb-4 text-4xl font-bold md:text-6xl"
-                >
+                <h2 className="mb-4 text-4xl font-bold md:text-6xl">
                   {slides[currentSlide].title}
-                </motion.h2>
-                <motion.p
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.4 }}
-                  className="text-lg md:text-xl mb-6"
-                >
+                </h2>
+                <p className="text-lg md:text-xl mb-6">
                   {slides[currentSlide].description}
-                </motion.p>
-                <motion.div
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.6 }}
-                >
+                </p>
+                <div>
                   <a
                     href={PROFILE_PDF_URL}
                     onClick={(e) => {
@@ -92,9 +78,9 @@ export default function HeaderSlider() {
                     }}
                     className="inline-block bg-yellow-400 text-green-800 font-bold py-4 px-10 text-xl rounded-full hover:bg-yellow-500 transition-colors shadow-lg cursor-pointer"
                   >
-                    Our Profile.
+                    OUR PROFILE
                   </a>
-                </motion.div>
+                </div>
               </div>
             </div>
           </motion.div>

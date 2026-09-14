@@ -50,13 +50,15 @@ export default function AgriculturalToolsPage() {
 
       {/* Modernization & Equipment Support */}
       <div className="py-16 px-6 max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        <div className="bg-gray-200 h-64 md:h-96 rounded-2xl flex items-center justify-center text-gray-500 font-bold text-xl">
-          Image Placeholder
-        </div>
+        <img
+          src="https://tufezgrcqbnxlqnzqsmc.supabase.co/storage/v1/object/public/Weekly/Akaliro/Tomatoes.jpg"
+          alt="Sustainable Farming"
+          className="w-full h-64 md:h-96 object-cover rounded-2xl"
+        />
         <div>
-          <h2 className="text-4xl font-bold mb-6 text-gray-900 border-l-4 border-[#298600] pl-4">Operator Guidance & Support</h2>
+          <h2 className="text-4xl font-bold mb-6 text-gray-900 border-l-4 border-[#298600] pl-4">Growing Our Own: Sustainability in Action</h2>
           <p className="text-xl text-gray-700 leading-relaxed">
-            Every equipment dispatch includes operational walkthroughs, safety compliance guidance, and preventative troubleshooting to maximize tool lifespan and safeguard farm operators.
+            Beyond our professional services, Akaliro Investments actively cultivates its own crops—including tomatoes, bananas, onions, cocoa, coffee, and cassava. This initiative offsets internal food costs and serves as a vital hands-on training ground, allowing our team to master horticulture skills that enhance our client services. We believe in living the same sustainability ethic we bring to every space we beautify.
           </p>
         </div>
       </div>

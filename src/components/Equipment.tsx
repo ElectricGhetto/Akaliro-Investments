@@ -19,7 +19,7 @@ export default function Equipment() {
       title: "Maintenance",
       description: "Professional maintenance services.",
       image: "https://tufezgrcqbnxlqnzqsmc.supabase.co/storage/v1/object/public/Weekly/Akaliro/Mainteinance.jpg",
-      link: "/logistics"
+      link: "/cleaning"
     },
   ];
 
@@ -59,7 +59,7 @@ export default function Equipment() {
           if (item.link) {
             return (
               <Link
-                key={index}
+                key={item.title}
                 to={item.link}
                 className="bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg block group border border-transparent hover:border-[#298600]/30"
               >
@@ -69,7 +69,7 @@ export default function Equipment() {
           }
 
           return (
-            <div key={index} className="bg-white rounded-2xl shadow-md overflow-hidden transition-transform hover:scale-105">
+            <div key={item.title} className="bg-white rounded-2xl shadow-md overflow-hidden transition-transform hover:scale-105">
               {content}
             </div>
           );

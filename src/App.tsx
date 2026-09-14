@@ -22,7 +22,7 @@ import ExperienceGreeningPage from './pages/ExperienceGreeningPage';
 import ExperienceNotesPage from './pages/ExperienceNotesPage';
 import HeavyMachineryPage from './pages/HeavyMachineryPage';
 import AgriculturalToolsPage from './pages/AgriculturalToolsPage';
-import LogisticsPage from './pages/LogisticsPage';
+import CleaningPage from './pages/CleaningPage';
 import CoreServicesPage from './pages/CoreServicesPage';
 import SuppliesPage from './pages/SuppliesPage';
 import RelatedServicesPage from './pages/RelatedServicesPage';
@@ -73,7 +73,7 @@ export default function App() {
           <Route path="/profile" element={<ProfileReaderPage />} />
           <Route path="/heavy-machinery" element={<HeavyMachineryPage />} />
           <Route path="/agricultural-tools" element={<AgriculturalToolsPage />} />
-          <Route path="/logistics" element={<LogisticsPage />} />
+          <Route path="/cleaning" element={<CleaningPage />} />
           <Route path="/services/core" element={<CoreServicesPage />} />
           <Route path="/services/supplies" element={<SuppliesPage />} />
           <Route path="/services/related" element={<RelatedServicesPage />} />

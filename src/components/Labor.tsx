@@ -13,7 +13,7 @@ export default function Labor() {
       </p>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {labor.map((item, index) => (
-          <div key={index} className="bg-white p-8 rounded-2xl shadow-md transition-transform hover:scale-105">
+          <div key={item.title} className="bg-white p-8 rounded-2xl shadow-md transition-transform hover:scale-105">
             <h3 className="font-semibold text-xl mb-4 text-gray-900">{item.title}</h3>
             <p className="text-gray-600 leading-relaxed">{item.description}</p>
           </div>
